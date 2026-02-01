@@ -60,9 +60,9 @@
 \end{figure}
 
 \begin{itemize}[leftmargin=3.0em, itemsep=0.0em, topsep=-0.0cm]
-    \item Designed a multi-layer ion trap chip composed of nine stacked layers, including DC/RF layers that provide the trapping potential, shim layers to compensate the principal axes and micromotion, and spacer layers. A shield layer is positioned on the top of the chip to collimate the ablated atomic beam. The DC electrodes are segmented to enable ion shuttling, as depicted in Fig.~\ref{fig:figure1}(a, left).
+    \item Designed a multi-layer ion-trap chip composed of nine stacked layers, including DC/RF layers that provide the trapping potential, shim layers to compensate the principal axes and micromotion, and spacer layers. A shield layer is positioned on the top of the chip to collimate the ablated atomic beam. The DC electrodes are segmented to enable ion shuttling, as depicted in Fig.~\ref{fig:figure1}(a, left).
     \item Simulated the designed structure with $\Omega_{\mathrm{RF}} = 2\pi\cdot 20.26~\mathrm{MHz}$ and $V_{\mathrm{RF}} = 75~\mathrm{V}$ using the Ansys Maxwell 3D electrostatic solver, as shown in Fig.~\ref{fig:figure1}(a, right). The simulations yield radial secular frequencies of about $3~\mathrm{MHz}$, in good agreement with the experimentally measured values.
-    \item Laser-cut the alumina substrate using a picosecond laser, deposited a Ti adhesion layer by sputtering, and electroplated Au to form the electrodes. The fabricated multi-layer chip is shown in Fig.~\ref{fig:figure1}(b).
+    \item Laser-cut the alumina substrate using a picosecond laser, deposited a Ti adhesion layer and Au seed layer by sputtering, and electroplated Au to form the electrodes. The fabricated multi-layer chip is shown in Fig.~\ref{fig:figure1}(b).
 \end{itemize}
 
 \vspace{0.0 cm}
@@ -105,10 +105,10 @@
 
 \begin{figure}[h]
     \centering
-    \begin{minipage}[!t]{0.45\textwidth}
+    \begin{minipage}[!h]{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/figure3.pdf}
-        \captionsetup{width=\linewidth}
+        \includegraphics[width=0.95\linewidth]{figures/figure3.pdf}
+        \captionsetup{width=0.95\linewidth}
         \caption{
             Axial displacement of a single trapped ion used as an in-situ probe of light-induced surface potentials.
         }
@@ -143,7 +143,7 @@
     \begin{minipage}[!t]{0.45\textwidth}
         \vspace{0pt}
         \begin{itemize}[leftmargin=0.0em, itemsep=0.2em, topsep=0.2em, parsep=0pt]
-            \item Developed a CNN-based detection program that takes EMCCD images as input and automatically identifies the number and positions of trapped ions in real time.
+            \item Developed a CNN-based detection program (Faster R-CNN) that takes EMCCD images as input and automatically identifies the number and positions of trapped ions in real time.
             \item Collected and labeled experimental ion images under varying ion numbers, fluorescence levels, and noise conditions to train and validate the model, and integrated the detection results with the experimental control software for feedback loading.
             \item Evaluated the model on experimental EMCCD images and confirmed that the predicted ion positions and counts agree with the labeled ground truth over 42 ions, as illustrated in Fig.~\ref{fig:figure4}. 
             \item Filed a Korean patent application on November~2025 under the title "Deep learning inference device for ion qubit detection, ion qubit detection system, and ion qubit detection method" based on this CNN detection framework.
@@ -151,7 +151,7 @@
     \end{minipage}
 \end{figure}
 
-\vspace{0.5 cm}
+\newpage
 \section{Normally-off GaN MOS-HFET}
 \hspace{0.5 cm}
 \textbf{Affiliation:} Advanced Semiconductor Technology Lab. (ASTL), Hongik University \hfill
@@ -170,7 +170,7 @@
         (\textbf{a})
         Schematic of AlGaN/GaN MOS-HFET integrated with a clamp circuit,
         (\textbf{b}) TCAD (Silvaco) model structure,
-        (\textbf{c}) I--V characteristics of TCAD and LTspice models 
+        (\textbf{c}) I--V characteristics of TCAD and LTspice models
         }
         \label{fig:figure5}
     \end{minipage}
