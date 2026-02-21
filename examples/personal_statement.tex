@@ -1,0 +1,76 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\colorlet{awesome}{awesome-darknight}
+
+\definecolor{darktext}{HTML}{414141}
+\definecolor{text}{HTML}{333333}
+\definecolor{graytext}{HTML}{5D5D5D}
+\definecolor{lighttext}{HTML}{999999}
+\definecolor{sectiondivider}{HTML}{5D5D5D}
+
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------- Personal info --------------------
+\photo[circle,noedge,left]{./profile.png}
+\name{Junhee}{Cho}
+\position{Graduate Researcher in Quantum Computing and Semiconductor Devices}
+\address{Yeonil-eup, Nam-gu, Pohang-si, Gyeongsangbuk-do, 37655, Republic of Korea}
+
+\mobile{(+82) 10-4706-7446}
+\email{junheecho@postech.ac.kr}
+
+\lettertitle{Personal Statement}
+\letteropening{}
+\letterclosing{}
+\letterenclosure{}
+
+\begin{document}
+
+\makecvheader[R]
+\vspace{5mm}
+
+{\Large \textbf{Personal Statement}}\\[1mm]
+{\small Ph.D in Electrical and Electronic Engineering, Nanyang Technological University}
+
+\vspace{2mm}
+
+\begin{cvletter}
+
+  \lettersection{Background and Motivation}
+  \color{darktext}
+  I am Junhee Cho, currently pursuing a Master’s degree in Electrical Engineering at Pohang University of Science and Technology (POSTECH), with an expected graduation in February 2026. I obtained my Bachelor’s degree in Electrical and Electronics Engineering from Hongik University. Throughout my studies, I have been drawn to hardware at the intersection of physics, devices, and systems. Starting from GaN power devices and circuit simulations and later moving into cryogenic trapped-ion quantum computing, I have become strongly motivated to develop photonic and quantum hardware for next-generation computing architectures.
+
+  These experiences have convinced me that future high-performance and quantum-enhanced computing will rely on carefully engineered physical platforms that combine electronic, photonic, and quantum degrees of freedom. I am particularly fascinated by photonic integrated circuits (PICs) and hybrid 2D-material/silicon photonic systems, which offer a promising route to overcome the bandwidth and energy limitations of conventional electronic interconnects while enabling new quantum and nonlinear functionalities. This motivation has led me to apply to the Ph.D.\ programme in Electrical and Electronic Engineering at NTU, where I hope to deepen my expertise in nanomaterials-integrated photonics and photonic integrated chips for quantum processing.
+
+  \lettersection{Research Preparation}
+  \color{darktext}
+  My research background spans both semiconductor device optimization and quantum hardware development, providing me with a broad and interdisciplinary technical foundation. At Hongik University’s Advanced Semiconductor Technology Lab (ASTL), I investigated the integration of depletion-mode AlGaN/GaN MOS-HFETs with clamp circuits to achieve normally-off operation. Using Silvaco ATLAS, I developed a device model that closely reproduced measured characteristics and converted it into a SPICE model for circuit-level simulations. Based on this model, I designed a DC–DC boost converter that achieved 99.5\% power-conversion efficiency, work that was recognised with the Undergraduate Poster Presentation Award at the 30th Korean Conference on Semiconductors.
+
+  Building on this foundation, I shifted my focus to quantum hardware at POSTECH. In the Quantum Computing and Quantum Networks (QCQN) Laboratory, I have been responsible for major components of a cryogenic trapped-ion quantum computing platform. I participated in designing and fabricating a multilayer ion-trap chip, developing stable electrical signal-delivery systems, and constructing laser systems with low power fluctuation and tunable frequency. I also contributed to building an ultra-high-vacuum cryogenic system and successfully trapping and imaging two $^{40}$Ca$^{+}$ ion qubits. This work received the On-Site Outstanding Poster Award at the 31st Korean Conference on Semiconductors.
+
+  Currently, I am investigating light-induced charging effects on trap electrodes, where oxide patches and UV illumination generate stray electric fields that degrade ion-trap stability. Using concepts from surface photovoltage theory, I analyse photon-induced surface charge dynamics with the goal of suppressing these effects and improving the long-term stability of trapped-ion qubits. Through these projects, I have gained hands-on experience in device and circuit simulation, optical and RF system design, and experimental quantum hardware, which I believe prepare me well for research in integrated photonics and nanomaterial-based optoelectronic devices.
+
+  \newpage
+
+  \lettersection{Alignment with NTU EEE and Future Goals}
+  \color{darktext}
+  I am particularly excited about the opportunity to conduct research in NTU EEE, where there is strong expertise in 2D materials, van der Waals heterostructures, and silicon photonics. Professor Sanghoon Chae’s work on 2D materials-integrated Si photonics, heterogeneous integration of diverse optical materials on photonic chips, and photonic integrated chips for quantum processing closely matches my interests in photonic integrated circuits and hybrid 2D-material/silicon platforms. I see a natural connection between my previous experience in device-level modelling and quantum hardware and the programme’s strengths in nanomaterials-integrated photonics and quantum photonic architectures on chip.
+
+  As part of my Ph.D.\ studies at NTU, I plan to work on a project that develops micro-LED integrated silicon photonic interconnects for data-intensive and AI computing systems. By replacing conventional laser-based links with micro-LED arrays on silicon photonic platforms, this project aims to realise massively parallel, multi-wavelength optical interconnects that are compact, energy-efficient, and compatible with CMOS wafer-level fabrication. I am particularly interested in designing on-chip silicon photonic waveguides and photonic cavities, such as microring resonators and photonic crystal structures, in order to enhance modulation bandwidth and light--matter interaction through resonance and Purcell effects. This planned research is closely aligned with my broader interests in silicon PICs, heterogeneous integration of nanomaterials and 2D materials on chip, and photonic integrated chips for quantum processing.
+
+  In the short term, I hope to acquire comprehensive expertise in device fabrication, optical characterisation, and heterogeneous integration techniques used in nanomaterial-based photonic devices. In the longer term, I aim to contribute to the development of electrically tunable, highly efficient photonic architectures that can support functions such as chip-scale frequency conversion, ultrafast optical interconnects, and integrated quantum photonic processing. My career goal is to become a researcher who can bridge semiconductor devices, integrated photonics, and quantum hardware, whether in academia or in a leading research institute or industry lab. I believe that the Ph.D.\ programme in Electrical and Electronic Engineering at NTU, with its strong environment in nanomaterials and integrated photonics, is the ideal next step toward this goal, and I would be honoured to contribute to its research community.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+%\makeletterclosing
+
+\end{document}
