@@ -44,7 +44,7 @@
 \textbf{Supervisor:} Prof.~Moonjoo Lee
 
 \vspace{0.5 cm}
-\subsection{Design and fabrication of multi-layer ion trap chip}
+\subsection{Multi-layer ion trap chip and its characterization}
 
 \begin{figure}[H]
     \centering
@@ -60,74 +60,76 @@
 \end{figure}
 
 \begin{itemize}[leftmargin=3.0em, itemsep=0.0em, topsep=-0.0cm]
-    \item Designed a multi-layer ion-trap chip composed of nine stacked layers, including DC/RF layers that provide the trapping potential, shim layers to compensate the principal axes and micromotion, and spacer layers. A shield layer is positioned on the top of the chip to collimate the ablated atomic beam. The DC electrodes are segmented to enable ion shuttling, as depicted in Fig.~\ref{fig:figure1}(a, left).
+    \item A multi-layer ion-trap chip composed of nine stacked layers was utilized in this work. The chip includes DC/RF layers that provide the trapping potential, shim layers for principal-axis and micromotion compensation, and spacer layers that separate the electrode layers. A shield layer is positioned on the top of the chip to collimate the ablated atomic beam. The DC electrodes are segmented to enable ion shuttling, as depicted in Fig.~\ref{fig:figure1}(a, left).
     \item Simulated the designed structure with $\Omega_{\mathrm{RF}} = 2\pi\cdot 20.26~\mathrm{MHz}$ and $V_{\mathrm{RF}} = 75~\mathrm{V}$ using the Ansys Maxwell 3D electrostatic solver, as shown in Fig.~\ref{fig:figure1}(a, right). The simulations yield radial secular frequencies of about $3~\mathrm{MHz}$, in good agreement with the experimentally measured values.
-    \item Laser-cut the alumina substrate using a picosecond laser, deposited a Ti adhesion layer and Au seed layer by sputtering, and electroplated Au to form the electrodes. The fabricated multi-layer chip is shown in Fig.~\ref{fig:figure1}(b).
+    \item Laser-cut the alumina substrate using a picosecond laser, deposited a Ti adhesion layer and Au seed layer by sputtering, and electroplated additional Au to form the electrodes. The fabricated multi-layer chip is shown in Fig.~\ref{fig:figure1}(b).
 \end{itemize}
 
 \vspace{0.0 cm}
 \subsection{Construction of cryogenic ion trap system}
 \begin{figure}[!h]
     \centering
-    \begin{minipage}{6in}
+    \begin{minipage}{6.0in}
         \includegraphics[width=6 in]{figures/figure2.pdf}
         \captionsetup{width=\linewidth}
         \caption{
-        (\textbf{a}) Overall view of the cryogenic ion trap experiment and optical setup. 
-        (\textbf{b}) Schematic of the cryostat and the components for trapping ions.
-        (\textbf{c}) Fluorescence image of two trapped ions.
+        (\textbf{a}) Overall layout of the laser and optical setup for photoionization, Doppler cooling, and repumping.
+        (\textbf{b}) Schematic of the cryogenic ion trap system and its main in-vacuum components.
+        (\textbf{c}) Photograph of the entire cryogenic ion trap setup.
+        (\textbf{d}) Fluorescence image of two trapped-ions.
         }
         \label{fig:figure2}
     \end{minipage}
 \end{figure}
 
-
 \begin{itemize}[leftmargin=3.0em, itemsep=0.0em, topsep=-0.0 mm]
-    \item Constructed the entire cryogenic ion trap system, as shown in Fig.~\ref{fig:figure2}(a). 
-    \textcircled{1} is the cryogenic station that contains the ion trap and the cool-down system to reach a temperature of 4~K. 
-    \textcircled{2} is the ion fluorescence imaging system with a high-gain EMCCD camera. 
-    \textcircled{3} is the vacuum pumping system for the ultra-high-vacuum (UHV) environment; the bellows in the figure are connected to the turbo and rotary pumps. 
-    \textcircled{4} is the helical resonator connected to an RF signal generator, providing a stable, high quality factor RF delivery system. 
-    The remaining part of Fig.~\ref{fig:figure2}(a) shows the laser system for ablation loading, ionization, Doppler cooling, and repumping.
-    
-    \item In the laser system, implemented a laser power-lock scheme using a PID control loop on an FPGA board and a high-resolution frequency modulation system. All of these are integrated into the experimental sequence via a home-made PyQt-based user interface (UI).
-    
-    \item In Fig.~\ref{fig:figure2}(b), the ion trap is located at the center of the cryogenic station and is enclosed in an oxygen-free high thermal conductivity (OFHC) copper chamber with low-pass filter boards mounted on each side. A high-NA (0.38) objective lens is positioned above the trap and mounted on a cryo-compatible XYZ piezo translation stage, and the trap is connected via two DC ribbon cables and an RF coaxial cable. Outside the cryogenic station, a pair of Helmholtz coils is used to generate a 4.2~G magnetic field at the ion position.
+    \item Constructed the laser and optical system for photoionization (422 and 369~nm), Doppler cooling (397~nm), and repumping (866 and 854~nm) for ion trapping in the cryostat, as shown in Fig.~\ref{fig:figure2}(a).
 
-    
-    \item Demonstrated trapping of up to two ions with $(\omega_x,\omega_y)=2\pi\cdot (2.75,2.88)~\text{MHz}$ and performed micromotion compensation by narrowing the Lorentzian linewidth in 397~nm spectroscopy, as shown in Fig.~\ref{fig:figure2}(c).
-    
-    \item Presented the progress of the cryogenic ion trap setup and preliminary results at the 2024 Korean Conference on Semiconductors and received an on-site outstanding poster award.
+    \item Constructed the cryogenic ion trap system inside the cryostat, as illustrated in Fig.~\ref{fig:figure2}(b). The main in-vacuum components are summarized as follows:
+    \begin{itemize}[leftmargin=2.0em, itemsep=0.0em, topsep=0.2em]
+        \item The ion trap chip was mounted and gold wire-bonded on a cryo- and vacuum-compatible PCB. Low-pass filter boards were installed on both sides of the trap and connected to the DC electrodes through ribbon cables, while the RF signal was directly fed to the trap.
+        \item The ion trap assembly was enclosed in an oxygen-free high thermal conductivity (OFHC) copper chamber mounted on the cold plate of the cryostat. The chamber was cooled to 4~K by a pulse-tube cryocooler to provide cryopumping, and charcoal getters were incorporated to enhance cryosorption.
+        \item A high-NA (0.38) objective lens was positioned above the trap and mounted on a cryogenic-compatible XYZ piezo translation stage for ion fluorescence imaging.
+    \end{itemize}
+
+    \item Figure~\ref{fig:figure2}(c) shows the overall cryogenic ion trap experiment, including the fluorescence imaging system with a high-gain EMCCD camera, the vacuum pumping system for maintaining the ultra-high-vacuum (UHV) environment, the helical resonator connected to the RF signal generator for stable high-Q RF delivery, the ablation loading system with a pulsed laser and calcium target, and the laser stabilization system.
+
+    \item Implemented laser power stabilization and frequency locking using a PID control loop on an FPGA board together with a high-resolution frequency modulation system. These subsystems were integrated into the experimental system through a home-built PyQt-based UI.
+
+    \item Demonstrated trapping of up to two ions with $(\omega_x,\omega_y)=2\pi\cdot(2.75,2.88)~\mathrm{MHz}$. A representative fluorescence image of two trapped-ions is shown in Fig.~\ref{fig:figure2}(d).
+
+    \item Presented the construction progress and preliminary experimental results of the cryogenic ion trap system at the 2024 Korean Conference on Semiconductors, where this work received an on-site outstanding poster award.
 \end{itemize}
 
-\vspace{0.3 cm}
+\newpage
+\vspace{0.0 cm}
 \subsection{Investigation of light-induced charging effects on the trap electrodes}
 
 \begin{figure}[h]
     \centering
     \begin{minipage}[!h]{0.45\textwidth}
         \centering
-        \includegraphics[width=0.95\linewidth]{figures/figure3.pdf}
-        \captionsetup{width=0.95\linewidth}
+        \includegraphics[width=0.90\linewidth]{figures/figure3.pdf}
+        \captionsetup{width=0.90\linewidth}
         \caption{
-            Axial displacement of a single trapped ion used as an in-situ probe of light-induced surface potentials.
+            Axial displacement of a single trapped-ion used as an in-situ probe of light-induced surface potentials.
         }
         \label{fig:figure3}
     \end{minipage}%
     \hfill
-    \begin{minipage}[!t]{0.45\textwidth}
+    \begin{minipage}[!h]{0.45\textwidth}
         \vspace{0pt}
         \begin{itemize}[leftmargin=0.0em, itemsep=0.2em, topsep=0.2em, parsep=0pt]
-            \item Used a single trapped ion as a sensitive \textit{in-situ} probe of light-induced charging on the trap electrodes by monitoring its time-dependent axial displacement when a focused UV beam was applied to localized oxide patches on the electrode surface.
-            \item Performed time-resolved measurements of the ion position during illumination and in the subsequent dark relaxation period, and systematically varied beam power, exposure time, and illumination geometry to observe how these parameters qualitatively modify the charging and discharging behavior.
+            \item Used a single trapped-ion as a sensitive \textit{in-situ} probe of light-induced charging on the trap electrodes by monitoring its time-dependent axial displacement when a focused UV beam was applied to oxide patches on the electrode surface.
+            \item Performed time-resolved measurements of the ion position during illumination and in the subsequent relaxation period, and varied beam power, exposure time, and illumination geometry to observe how these parameters qualitatively modify the charging and discharging behavior.
             \item Identified sign-changing charging and discharging effects on the oxide surface from the ion-image data, and compared these features with expectations from a trap-limited surface photovoltage (SPV) picture.
-            \item Discussed how the observed photo-induced stray fields affect ion stability in our cryogenic ion-trap system, and are currently preparing a manuscript based on these preliminary results.
+            \item Discussed how the observed photo-induced stray fields affect ion stability in our cryogenic ion-trap system.
         \end{itemize}
     \end{minipage}
 \end{figure}
 
-\vspace{1 cm}
-\subsection{CNN-based detection program for trapped ions}
+\vspace{0.0 cm}
+\subsection{CNN-based detection program for trapped-ions}
 \begin{figure}[h]
     \centering
     \begin{minipage}[!t]{0.4\textwidth}
@@ -135,7 +137,7 @@
         \includegraphics[width=\linewidth]{figures/figure4.pdf}
         \captionsetup{width=\linewidth}
         \caption{
-            Example EMCCD images of trapped ions and CNN-based detection results for estimating the ion number and positions in real time.
+            Example EMCCD images of trapped-ions and CNN-based detection results for estimating the ion number and positions in real time.
         }
         \label{fig:figure4}
     \end{minipage}%
@@ -143,7 +145,7 @@
     \begin{minipage}[!t]{0.45\textwidth}
         \vspace{0pt}
         \begin{itemize}[leftmargin=0.0em, itemsep=0.2em, topsep=0.2em, parsep=0pt]
-            \item Developed a CNN-based detection program (Faster R-CNN) that takes EMCCD images as input and automatically identifies the number and positions of trapped ions in real time.
+            \item Developed a CNN-based detection program (Faster R-CNN) that takes EMCCD images as input and automatically identifies the number and positions of trapped-ions in real time.
             \item Collected and labeled experimental ion images under varying ion numbers, fluorescence levels, and noise conditions to train and validate the model, and integrated the detection results with the experimental control software for feedback loading.
             \item Evaluated the model on experimental EMCCD images and confirmed that the predicted ion positions and counts agree with the labeled ground truth over 42 ions, as illustrated in Fig.~\ref{fig:figure4}. 
             \item Filed a Korean patent application on November~2025 under the title "Deep learning inference device for ion qubit detection, ion qubit detection system, and ion qubit detection method" based on this CNN detection framework.
